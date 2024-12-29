@@ -17,6 +17,6 @@ public class CarController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.position += Vector3.forward *moveInput * speed;
+        transform.position += Vector3.forward *moveInput * speed * Time.fixedDeltaTime;
     }
 }
