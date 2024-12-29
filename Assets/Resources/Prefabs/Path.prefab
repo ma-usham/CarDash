@@ -375,7 +375,6 @@ Transform:
   m_LocalScale: {x: 14.052285, y: 0.050405573, z: 3.3169398}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6689741886876884561}
   - {fileID: 1837979154835743664}
   - {fileID: 8351234255475322296}
   - {fileID: 3031265587104594412}
@@ -1021,7 +1020,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 127
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3160612139204722110
 Transform:
@@ -1253,7 +1252,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 127
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6352784187568074569
 Transform:
@@ -1518,6 +1517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: deciduous tree
       objectReference: {fileID: 0}
+    - target: {fileID: 1909787429240085703, guid: 9129eef4470bd584d8675065420e67fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5017494175042035499, guid: 9129eef4470bd584d8675065420e67fe, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1549,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree round foliage
       objectReference: {fileID: 0}
+    - target: {fileID: 6991265809765871834, guid: fea69626389bd194daaf921d168eefe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7660103562539428448, guid: fea69626389bd194daaf921d168eefe7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0355814
@@ -1563,7 +1570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7660103562539428448, guid: fea69626389bd194daaf921d168eefe7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34802458
+      value: 0.342
       objectReference: {fileID: 0}
     - target: {fileID: 7660103562539428448, guid: fea69626389bd194daaf921d168eefe7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1612,85 +1619,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7660103562539428448, guid: fea69626389bd194daaf921d168eefe7, type: 3}
   m_PrefabInstance: {fileID: 1849762106727188440}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3970853273261349755
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7788641565774368513}
-    m_Modifications:
-    - target: {fileID: -72326963056337692, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955284481156177808, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_Name
-      value: dry palm tree
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0355814
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 9.919538
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15074135
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.44263262
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.49999455
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.3090198
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -72326963056337692, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
---- !u!4 &6689741886876884561 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7768131899157480746, guid: afe706e7fb34aa04aa74bdcd9b705929, type: 3}
-  m_PrefabInstance: {fileID: 3970853273261349755}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4730955874052296743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1707,6 +1635,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree orange foliage
       objectReference: {fileID: 0}
+    - target: {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7881406501370370259, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0355814
@@ -1721,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881406501370370259, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.37075815
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 7881406501370370259, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1729,7 +1665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881406501370370259, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.034670442
+      value: -0.076
       objectReference: {fileID: 0}
     - target: {fileID: 7881406501370370259, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1785,6 +1721,10 @@ PrefabInstance:
     - target: {fileID: 6304981980776018901, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_Name
       value: tree without leaves 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304981980776018901, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1875,7 +1815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145806786911218869, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.42487437
+      value: 0.459
       objectReference: {fileID: 0}
     - target: {fileID: 5145806786911218869, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1883,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145806786911218869, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.123081274
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5145806786911218869, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1917,6 +1857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sakura tree
       objectReference: {fileID: 0}
+    - target: {fileID: 5486022813595956751, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 676632282941447561, guid: 745572adb33fc084b8a98fcd3a1c5de3, type: 3}
     m_RemovedGameObjects: []
@@ -1944,6 +1888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree without leaves 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6304981980776018901, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0355814
@@ -1958,7 +1906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4682512
+      value: 0.453
       objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1966,7 +1914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4296129
+      value: -0.326
       objectReference: {fileID: 0}
     - target: {fileID: 6643965141611506031, guid: cc9fadb8a79caa94992903911ee6d7d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2070,6 +2018,10 @@ PrefabInstance:
     - target: {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
       propertyPath: m_Name
       value: japanese deciduous tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8468285090874280606, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
       propertyPath: m_Enabled
