@@ -1,4 +1,7 @@
+using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
 
 public class CarController : MonoBehaviour
 {
@@ -7,11 +10,14 @@ public class CarController : MonoBehaviour
     private Vector2 swipe;
     private bool isSwiping;
 
+     private const float leftLane = -1.1f;
+     private const float centerLane=0f;
+     private const float rightLane = 1.1f;
+
+    [SerializeField] private float SmoothFactor;
+
     private void Update()
     {
-        #if UNITY_EDITOR || UNITY_STANDALONE
-                HandleMouseInput();
-        #endif
         GetTouchInput();
     }
     void GetTouchInput()
@@ -42,46 +48,40 @@ public class CarController : MonoBehaviour
         }
     }
 
-    private void HandleMouseInput()
-    {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button pressed
-        {
-            startTouchPos = Input.mousePosition;
-            isSwiping = true;
-        }
-
-        if (Input.GetMouseButton(0)) // Left mouse button held down
-        {
-            endTouchPos = Input.mousePosition;
-        }
-
-        if (Input.GetMouseButtonUp(0)) // Left mouse button released
-        {
-            endTouchPos = Input.mousePosition;
-            swipe = endTouchPos - startTouchPos;
-            isSwiping = false;
-            DetectSwipe();
-        }
-    }
 
     void DetectSwipe()
     {
         if (swipe.magnitude >50) //swipe distance
         {
-            float x = swipe.x;
-            float y = swipe.y;
 
-            if(Mathf.Abs(x) > Mathf.Abs(y))
+            if(Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
             {
-                if (x > 0)
+                if (swipe.x> 0)
                 {
-                    Debug.Log("Swipe RIght");
+                    Debug.Log("rightSwipe");
+                    if (transform.position.x == leftLane) SwipeRight(centerLane);
+                    if(transform.position.x == centerLane) SwipeRight(rightLane);
+
                 }
                 else
                 {
-                    Debug.Log("SwipeLeft");
+                    Debug.Log("LeftSwipe");
+                   if(transform.position.x == centerLane) SwipeLeft(leftLane);
+                   if(transform.position.x == rightLane) SwipeLeft(centerLane);
                 }
             }
         }
+    }
+
+
+    void SwipeLeft(float targetLane)
+    {
+        Debug.Log("SwipingLeft");
+        transform.DOMoveX(targetLane, SmoothFactor);
+    }
+    void SwipeRight(float targetLane)
+    {
+        Debug.Log("SwipingRight");
+        transform.DOMoveX(targetLane, SmoothFactor);
     }
 }
