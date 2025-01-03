@@ -23,7 +23,7 @@ public class PathManager : MonoBehaviour
     {
         if (player.transform.position.z > roadSections[0].transform.position.z + roadLength)
         {
-            //SpawnRoad();
+            SpawnRoad();
             DestroyRoad();
         }
     }
@@ -41,11 +41,7 @@ public class PathManager : MonoBehaviour
     {
         GameObject oldRoad = roadSections[0];
         roadSections.RemoveAt(0);
-        oldRoad.transform.position = spawnRoadPos;
-        spawnRoadPos += Vector3.forward * roadLength;
-
-        // Re-add it to the end of the list
-        roadSections.Add(oldRoad);
+        Destroy(oldRoad);
     }
 
 

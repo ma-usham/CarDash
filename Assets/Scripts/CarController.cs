@@ -2,21 +2,86 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float speed;
-    private float moveInput;
-    void Start()
+    private Vector2 startTouchPos;
+    private Vector2 endTouchPos;
+    private Vector2 swipe;
+    private bool isSwiping;
+
+    private void Update()
     {
-        
+        #if UNITY_EDITOR || UNITY_STANDALONE
+                HandleMouseInput();
+        #endif
+        GetTouchInput();
+    }
+    void GetTouchInput()
+    {
+        Debug.Log("DetectingInput");
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch(touch.phase)
+            {
+                case TouchPhase.Began:
+                    startTouchPos = touch.position;
+                    isSwiping = true;
+                    break;
+
+                case TouchPhase.Moved:
+                    endTouchPos = touch.position;
+                    break;
+
+                case TouchPhase.Ended:
+                    endTouchPos = touch.position;
+                    swipe = endTouchPos - startTouchPos;
+                    isSwiping = false;
+                    DetectSwipe();
+                    break;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleMouseInput()
     {
-        moveInput = Input.GetAxis("Vertical");
+        if (Input.GetMouseButtonDown(0)) // Left mouse button pressed
+        {
+            startTouchPos = Input.mousePosition;
+            isSwiping = true;
+        }
+
+        if (Input.GetMouseButton(0)) // Left mouse button held down
+        {
+            endTouchPos = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0)) // Left mouse button released
+        {
+            endTouchPos = Input.mousePosition;
+            swipe = endTouchPos - startTouchPos;
+            isSwiping = false;
+            DetectSwipe();
+        }
     }
-    private void FixedUpdate()
+
+    void DetectSwipe()
     {
-        transform.position += Vector3.forward *moveInput * speed * Time.fixedDeltaTime;
+        if (swipe.magnitude >50) //swipe distance
+        {
+            float x = swipe.x;
+            float y = swipe.y;
+
+            if(Mathf.Abs(x) > Mathf.Abs(y))
+            {
+                if (x > 0)
+                {
+                    Debug.Log("Swipe RIght");
+                }
+                else
+                {
+                    Debug.Log("SwipeLeft");
+                }
+            }
+        }
     }
 }
