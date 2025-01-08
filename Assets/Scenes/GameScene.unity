@@ -4669,6 +4669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmoothFactor: 0.2
+  moveSpeed: 2
   tiltAngleZ: 3
   tiltAngleY: 8
   tiltDuration: 0.2
