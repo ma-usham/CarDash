@@ -16,6 +16,10 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float SmoothFactor;
 
+    [SerializeField] private float tiltAngleZ = 15f; // Tilt angle for z-axis
+    [SerializeField] private float tiltAngleY = 10f; // Tilt angle for y-axis
+    [SerializeField] private float tiltDuration = 0.2f;
+
     private void Update()
     {
         GetTouchInput();
@@ -76,11 +80,23 @@ public class CarController : MonoBehaviour
 
     void SwipeLeft(float targetLane)
     {
+        transform.DORotate(new Vector3(0, -tiltAngleY, tiltAngleZ), tiltDuration)
+        .OnComplete(() =>
+        {
+            // Reset the rotation
+            transform.DORotate(Vector3.zero, tiltDuration);
+        });
         Debug.Log("SwipingLeft");
         transform.DOMoveX(targetLane, SmoothFactor);
     }
     void SwipeRight(float targetLane)
     {
+        transform.DORotate(new Vector3(0, tiltAngleY, -tiltAngleZ), tiltDuration)
+         .OnComplete(() =>
+         {
+             // Reset the rotation
+             transform.DORotate(Vector3.zero, tiltDuration);
+         });
         Debug.Log("SwipingRight");
         transform.DOMoveX(targetLane, SmoothFactor);
     }
